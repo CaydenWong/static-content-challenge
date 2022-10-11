@@ -27,7 +27,7 @@ app.get("*", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("App listening on http://localhost:3000");
+  console.log("App listening on http://localhost:" + port);
 });
 
 module.exports = app
