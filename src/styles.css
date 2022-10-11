@@ -1,0 +1,12 @@
+body {
+    font-family: monospace, serif, sans-serif;
+    background-color: #659DBD;
+    margin: auto 50px;
+    color: #FFFFFF;
+}
+h1 {
+    font-style: italic;
+}
+p {
+    text-indent: 1.5em;
+}
