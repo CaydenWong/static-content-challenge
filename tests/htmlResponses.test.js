@@ -1,8 +1,8 @@
 const supertest = require("supertest");
-const app = require("../src");
+const app = require("../src/lib/express");
 const request = supertest(app);
 const marked = require("marked")
-const utils = require("../src/utils");
+const utils = require("../src/lib/utils");
 
 const testMarkDownString = "# Test Mark Down Title\n\nfirst paragraph\n\nsecond paragraph"
 
@@ -21,6 +21,7 @@ describe("Expected responses of HTML requests", () => {
     return request
       .get('/existing/folder')
       .expect(200)
+      // .end(done)
   });
 
   it("Valid URLs return a body that contains the HTML generated from the relevant markdown file", (done) => {
@@ -40,4 +41,6 @@ describe("Expected responses of HTML requests", () => {
       .get('/non/existing/folder')
       .expect(404)
   });
+
+
 });
